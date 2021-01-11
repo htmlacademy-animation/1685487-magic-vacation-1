@@ -2,11 +2,40 @@
 // point 1
 .js-menu-link {
   &::after {
-    transition: width 0.5s ease-out;
+    transition: width 0.4s ease-out;
     right: 0;
   }
   &:hover::after {
     width: 100%;
     left: 0;
+  }
+}
+
+// point 2
+.social-block__list {
+  li {
+    transform: translateY(10px);
+    opacity: 0;
+    transition: all 0.1s ease-out;
+    transition-delay: 0s;
+    :hover {
+      transition: all 0.2s ease-out;
+    }
+  }
+}
+
+.social-block:hover {
+  .social-block__list {
+    li {
+      transform: translateY(0px);
+      transition: all 0.4s ease-out;
+      opacity: 1;
+      &:nth-child(2) {
+        transition-delay: 0.05s;
+      }
+      &:nth-child(3) {
+        transition-delay: 0.1s;
+      }
+    }
   }
 }
