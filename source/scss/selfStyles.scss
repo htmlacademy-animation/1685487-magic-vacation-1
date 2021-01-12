@@ -59,3 +59,38 @@
     transform: translateY(0);
   }
 }
+
+// point 4
+.swiper-slide  {
+  .slider__item-text {
+    transition: all 0.4s ease-out;
+    transform: translateX(30px);
+    opacity: 0;
+  }
+}
+
+.swiper-slide-active, .swiper-slide-next {
+  .slider__item-text {
+    transform: translateX(0);
+    opacity: 1;
+    transition: opacity 0.4s ease-out 0;
+  }
+}
+
+.swiper-slide-next  {
+  .slider__item-text {
+    transition-delay: 1s; 
+  }
+}
+
+.swiper-slide-active  {
+  .slider__item-text {
+    transition-delay: 0.5s; 
+  }
+}
+
+.swiper-slide-prev  {
+  .slider__item-text {
+    transform: translateX(0);
+  }
+}
