@@ -94,3 +94,23 @@
     transform: translateX(0);
   }
 }
+
+// point 5
+.form {
+  justify-content: flex-end;
+  .form__field {
+    animation: form__field 0.6s ease-in;
+  }
+  .form__button {
+    flex-grow: 0;
+  }
+}
+
+@keyframes form__field {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: calc(100% - 21rem);
+  }
+}
