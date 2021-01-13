@@ -131,3 +131,66 @@
     width: calc(100% - 21rem);
   }
 }
+
+// ! module 1, task 2
+$onLoad-transition: all 0.6s cubic-bezier(.19,1.03,.99,1);
+
+.page-header {
+  &__logo {
+    transition: $onLoad-transition;
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+
+  &__nav {
+    transition: $onLoad-transition;
+    opacity: 0;
+
+    .js-menu-link.active::after {
+      transition: $onLoad-transition;
+      right: 0;
+      width: 0;
+    }
+  }
+}
+
+.screen__footer {
+  transform: translateY(30px);
+  transition: $onLoad-transition;
+}
+
+.social-block__toggler {
+  &::before {
+    transition: all 0.4s cubic-bezier(.78,.46,.46,1.91);
+    width: 0;
+    height: 0;
+  }
+}
+
+body.onload {
+  .page-header {
+    &__logo {
+      transform: translateX(0);
+      opacity: 1;
+    }
+
+    &__nav {
+      opacity: 1;
+      .js-menu-link.active::after {
+        width: 100%;
+        left: 0;
+      }
+    }
+  }
+
+  .screen__footer {
+    transform: translateY(0);
+  }
+
+  .social-block__toggler {
+    &::before {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
