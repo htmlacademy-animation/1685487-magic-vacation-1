@@ -9,7 +9,11 @@ import form from './modules/form.js';
 import social from './modules/social.js';
 import FullPageScroll from './modules/full-page-scroll';
 
+import selfScripts from './selfScripts'
+
 // init modules
+selfScripts();
+
 mobileHeight();
 slider();
 menu();
