@@ -40,12 +40,21 @@ export default class FullPageScroll {
   }
 
   changeVisibilityDisplay() {
-    this.screenElements.forEach((screen) => {
-      screen.classList.add(`screen--hidden`);
-      screen.classList.remove(`active`);
-    });
-    this.screenElements[this.activeScreen].classList.remove(`screen--hidden`);
-    this.screenElements[this.activeScreen].classList.add(`active`);
+    let timeStop = 0
+    let bgPage = document.getElementById('bgPage')
+    if (this.activeScreen === 2) {
+      timeStop = 300
+      bgPage.classList.add('active')
+    }
+    setTimeout(() => {
+      this.screenElements.forEach((screen) => {
+        screen.classList.add(`screen--hidden`);
+        screen.classList.remove(`active`);
+      });
+      this.screenElements[this.activeScreen].classList.remove(`screen--hidden`);
+      this.screenElements[this.activeScreen].classList.add(`active`);
+      bgPage.classList.remove('active')
+    }, timeStop)
   }
 
   changeActiveMenuItem() {

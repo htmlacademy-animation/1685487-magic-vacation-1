@@ -194,3 +194,22 @@ body.onload {
     }
   }
 }
+
+// ! module 1, task 3
+.background-page {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 100%;
+  background: $c-dark;
+  transition: opacity 0.3s ease-in, top 0s 1s;
+  z-index: 10;
+  opacity: 0;
+}
+
+.background-page.active {
+  top: 0;
+  opacity: 1;
+  transition: top 0.3s ease-out;
+}
