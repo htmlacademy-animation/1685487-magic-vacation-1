@@ -132,19 +132,6 @@
   }
 }
 
-.screen--hidden {
-  .form .form__field::placeholder {
-    opacity: 0;
-    transition: opacity 0.5s 0.5s;
-  }
-}
-.screen--show {
-  .form .form__field {
-    opacity: 1;
-    transition: opacity 0.5s 0.5s;
-  }
-}
-
 // ! module 1, task 2
 $onLoad-transition: all 0.6s cubic-bezier(0.19, 1.03, 0.99, 1);
 
@@ -526,5 +513,18 @@ body.onload {
   100% {
     transform: translate(60%, 10%) rotate(0deg);
     opacity: 1;
+  }
+}
+
+.screen--hidden {
+  .form .form__field::placeholder {
+    opacity: 0;
+    transition: opacity 0.5s 0.5s;
+  }
+}
+.screen--show {
+  .form .form__field::placeholder {
+    opacity: 1;
+    transition: opacity 0.5s 0.5s;
   }
 }
