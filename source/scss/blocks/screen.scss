@@ -9,6 +9,10 @@
   &--hidden {
     display: none;
   }
+  &--result.screen--hidden {
+    opacity: 0;
+    display: flex;
+  }
 
   @media (max-width: $tablet) and (orientation: portrait) {
     min-height: calc(var(--vh, 1vh) * 100);
