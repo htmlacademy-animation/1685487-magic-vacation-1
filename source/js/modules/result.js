@@ -14,6 +14,11 @@ export default () => {
         });
         targetEl[0].classList.add(`screen--show`);
         targetEl[0].classList.remove(`screen--hidden`);
+        let result = document.querySelectorAll(`.result--prize`)[0];
+        let pictures = result.querySelectorAll('picture')
+        pictures.forEach(pic => {
+          pic.classList.add('active')
+        })
       });
     }
 
